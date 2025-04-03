@@ -1,0 +1,13 @@
+* {
+    
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: beige;
+}
