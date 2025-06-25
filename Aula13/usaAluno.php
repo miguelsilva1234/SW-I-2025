@@ -1,19 +1,14 @@
 <?php
     include_once 'Aluno.class.php';
 
-    $fulano = new Aluno("Vinicius",5,8);
+    $fulano = new Aluno("Fulano da Silva", 5,7);
 
     $nota1 = $fulano->getNota1();
-    $nota1 = $fulano->getNota2();
-    $Nome = $fulano->getNome();
-    
-    //echo $nota2;
-    
-    $Nome = $fulano->getNome($nome);
+    $nota2 = $fulano->getNota2();
+
+    // echo $nota1;
+
     $media = $fulano->Media($nota1,$nota2);
 
-     
-    echo $fulano->getNome($nome);
-    echo $fulano->verificarSituacao($media);
-
-?>
+    echo $fulano->VerificarSituacao($media);
+?>          

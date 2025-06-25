@@ -1,34 +1,13 @@
 <?php
-    include_once 'Livro.class.php';
+include("Livro.class.php");
 
-    $livro = new Livro('Lusíadas','Camões',true);
+$livro1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien");
 
-    //echo "<pre>";
-    //var_dump ($livro);
-    //echo "</pre>";
+echo $livro1->exibirStatus() . "<br>";
 
-    echo "MOSTRA O STATUS DE UM LIVRO <br>";
-    echo $livro->ExibirStatus();
-    echo "<hr>";
+$livro1->emprestar();
+echo $livro1->exibirStatus() . "<br>"; 
 
-    echo "REALIZANDO UM EMPRESTIMO <br>";
-    $livro->Emprestar();
-    echo "<hr>";
-
-    echo "MOSTRA O STATUS DE UM LIVRO <br>";
-    echo $livro->ExibirStatus();
-    echo "<hr>";
-
-    //echo "REALIZANDO UM EMPRESTIMO <br>";
-    //$livro->Emprestar();
-    //echo "<hr>";
-
-    echo "DEVOLVENDO UM LIVRO <br>";
-    $livro->Devolver();
-    echo "<hr>";
-
-    echo "MOSTRA O STATUS DE UM LIVRO <br>";
-    echo $livro->ExibirStatus();
-    echo "<hr>";
-
+$livro1->devolver();
+echo $livro1->exibirStatus();          
 ?>
